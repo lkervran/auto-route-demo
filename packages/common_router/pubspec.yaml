@@ -1,0 +1,23 @@
+name: common_router
+description: 'Common router for the auto_route package.'
+version: 0.0.1
+resolution: workspace
+
+environment:
+  sdk: ^3.8.1
+  flutter: '>=3.27.0'
+
+dependencies:
+  auto_route: ^10.1.0+1
+  flutter:
+    sdk: flutter
+  flutter_riverpod: 3.0.0-dev.16
+  riverpod_annotation: 3.0.0-dev.16
+  table:
+
+dev_dependencies:
+  auto_route_generator: ^10.1.0+1
+  build_runner: ^2.5.4
+  custom_lint: ^0.7.5
+  riverpod_generator: 3.0.0-dev.16
+  riverpod_lint: 3.0.0-dev.16
