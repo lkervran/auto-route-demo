@@ -9,19 +9,19 @@ environment:
   flutter: '>=3.27.0'
 
 dependencies:
-  auto_route: ^10.1.0+1
+  auto_route: ^10.1.2
   common_router:
   flutter:
     sdk: flutter
-  flutter_riverpod: 3.0.0-dev.16
-  riverpod_annotation: 3.0.0-dev.16
+  flutter_riverpod: ^3.0.0
+  riverpod_annotation: ^3.0.0
 
 dev_dependencies:
-  auto_route_generator: ^10.1.0+1
+  auto_route_generator: ^10.2.4
   build_runner: ^2.5.4
-  custom_lint: ^0.7.5
-  riverpod_generator: 3.0.0-dev.16
-  riverpod_lint: 3.0.0-dev.16
+  custom_lint: ^0.8.0
+  riverpod_generator: ^3.0.0
+  riverpod_lint: ^3.0.0
 
 flutter:
   uses-material-design: true

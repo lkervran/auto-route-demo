@@ -9,6 +9,7 @@ TableNavigator commonTableNavigator(BuildContext context) {
   return TableNavigator(
     navigateToTable: () {
       showDialog<void>(
+        context: context,
         builder: (context) {
           return AlertDialog(
             title: const Text('Common navigator'),
@@ -23,7 +24,6 @@ TableNavigator commonTableNavigator(BuildContext context) {
             ],
           );
         },
-        context: context,
       );
     },
   );
