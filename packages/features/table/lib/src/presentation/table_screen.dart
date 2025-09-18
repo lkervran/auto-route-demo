@@ -20,7 +20,11 @@ class _TableScreenState extends ConsumerState<TableScreen> {
             const Text('Table'),
             ElevatedButton(
               onPressed: () => ref.read(tableNavigatorProvider).navigateToTable(),
-              child: const Text('Navigate to table'),
+              child: const Text('Navigate to desktop specific route'),
+            ),
+            ElevatedButton(
+              onPressed: () => ref.read(tableNavigatorProvider).navigateToHandHistory(),
+              child: const Text('Navigate to hand history'),
             ),
           ],
         ),

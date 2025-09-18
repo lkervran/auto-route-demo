@@ -5,8 +5,11 @@ import 'package:table/table.dart';
 
 TableNavigator commonTableNavigator(BuildContext context) {
   return TableNavigator(
-    goBack: () {
-      navigatorKey.currentContext?.router.pop();
+    goBack: (widgetContext) {
+      widgetContext.router.maybePop();
+    },
+    navigateToHandDetail: () {
+      navigatorKey.currentContext?.router.push(const HandDetailRoute());
     },
     navigateToTable: () {
       showDialog<void>(
@@ -26,6 +29,9 @@ TableNavigator commonTableNavigator(BuildContext context) {
           );
         },
       );
+    },
+    navigateToHandHistory: () {
+      navigatorKey.currentContext?.router.push(const HandHistoryRoute());
     },
   );
 }
