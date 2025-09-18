@@ -1,15 +1,17 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:table/table.dart';
 
 @RoutePage()
-class DesktopSpecificScreen extends StatefulWidget {
+class DesktopSpecificScreen extends ConsumerStatefulWidget {
   const DesktopSpecificScreen({super.key});
 
   @override
-  State<DesktopSpecificScreen> createState() => _DesktopSpecificScreenState();
+  ConsumerState<DesktopSpecificScreen> createState() => _DesktopSpecificScreenState();
 }
 
-class _DesktopSpecificScreenState extends State<DesktopSpecificScreen> {
+class _DesktopSpecificScreenState extends ConsumerState<DesktopSpecificScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +21,7 @@ class _DesktopSpecificScreenState extends State<DesktopSpecificScreen> {
           children: [
             const Text('Desktop Specific Route'),
             ElevatedButton(
-              onPressed: () => context.router.pop(),
+              onPressed: () => ref.read(tableNavigatorProvider).goBack(),
               child: const Text('Go back'),
             ),
           ],

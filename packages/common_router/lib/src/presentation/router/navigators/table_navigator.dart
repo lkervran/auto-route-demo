@@ -1,15 +1,16 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:common_router/common_router.dart';
 import 'package:flutter/material.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:table/table.dart';
-
-part 'table_navigator.g.dart';
 
 TableNavigator commonTableNavigator(BuildContext context) {
   return TableNavigator(
+    goBack: () {
+      navigatorKey.currentContext?.router.pop();
+    },
     navigateToTable: () {
       showDialog<void>(
-        context: context,
+        context: navigatorKey.currentContext!,
         builder: (context) {
           return AlertDialog(
             title: const Text('Common navigator'),
@@ -27,9 +28,4 @@ TableNavigator commonTableNavigator(BuildContext context) {
       );
     },
   );
-}
-
-@riverpod
-TableNavigator tableNavigatorImpl(Ref ref, {required BuildContext context}) {
-  return commonTableNavigator(context);
 }

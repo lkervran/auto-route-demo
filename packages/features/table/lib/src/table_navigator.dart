@@ -6,6 +6,7 @@ part 'table_navigator.freezed.dart';
 @freezed
 abstract class TableNavigator with _$TableNavigator {
   const factory TableNavigator({
+    required VoidCallback goBack,
     required VoidCallback navigateToTable,
   }) = _TableNavigator;
 }

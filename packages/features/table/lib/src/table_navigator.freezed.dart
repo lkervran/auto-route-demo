@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -15,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$TableNavigator {
 
- VoidCallback get navigateToTable;
+ VoidCallback get goBack; VoidCallback get navigateToTable;
 /// Create a copy of TableNavigator
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -26,16 +25,16 @@ $TableNavigatorCopyWith<TableNavigator> get copyWith => _$TableNavigatorCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TableNavigator&&(identical(other.navigateToTable, navigateToTable) || other.navigateToTable == navigateToTable));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TableNavigator&&(identical(other.goBack, goBack) || other.goBack == goBack)&&(identical(other.navigateToTable, navigateToTable) || other.navigateToTable == navigateToTable));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,navigateToTable);
+int get hashCode => Object.hash(runtimeType,goBack,navigateToTable);
 
 @override
 String toString() {
-  return 'TableNavigator(navigateToTable: $navigateToTable)';
+  return 'TableNavigator(goBack: $goBack, navigateToTable: $navigateToTable)';
 }
 
 
@@ -46,7 +45,7 @@ abstract mixin class $TableNavigatorCopyWith<$Res>  {
   factory $TableNavigatorCopyWith(TableNavigator value, $Res Function(TableNavigator) _then) = _$TableNavigatorCopyWithImpl;
 @useResult
 $Res call({
- VoidCallback navigateToTable
+ VoidCallback goBack, VoidCallback navigateToTable
 });
 
 
@@ -63,9 +62,10 @@ class _$TableNavigatorCopyWithImpl<$Res>
 
 /// Create a copy of TableNavigator
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? navigateToTable = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? goBack = null,Object? navigateToTable = null,}) {
   return _then(_self.copyWith(
-navigateToTable: null == navigateToTable ? _self.navigateToTable : navigateToTable // ignore: cast_nullable_to_non_nullable
+goBack: null == goBack ? _self.goBack : goBack // ignore: cast_nullable_to_non_nullable
+as VoidCallback,navigateToTable: null == navigateToTable ? _self.navigateToTable : navigateToTable // ignore: cast_nullable_to_non_nullable
 as VoidCallback,
   ));
 }
@@ -73,13 +73,144 @@ as VoidCallback,
 }
 
 
+/// Adds pattern-matching-related methods to [TableNavigator].
+extension TableNavigatorPatterns on TableNavigator {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _TableNavigator value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _TableNavigator() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _TableNavigator value)  $default,){
+final _that = this;
+switch (_that) {
+case _TableNavigator():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _TableNavigator value)?  $default,){
+final _that = this;
+switch (_that) {
+case _TableNavigator() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( VoidCallback goBack,  VoidCallback navigateToTable)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _TableNavigator() when $default != null:
+return $default(_that.goBack,_that.navigateToTable);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( VoidCallback goBack,  VoidCallback navigateToTable)  $default,) {final _that = this;
+switch (_that) {
+case _TableNavigator():
+return $default(_that.goBack,_that.navigateToTable);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( VoidCallback goBack,  VoidCallback navigateToTable)?  $default,) {final _that = this;
+switch (_that) {
+case _TableNavigator() when $default != null:
+return $default(_that.goBack,_that.navigateToTable);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 
 
 class _TableNavigator implements TableNavigator {
-  const _TableNavigator({required this.navigateToTable});
+  const _TableNavigator({required this.goBack, required this.navigateToTable});
   
 
+@override final  VoidCallback goBack;
 @override final  VoidCallback navigateToTable;
 
 /// Create a copy of TableNavigator
@@ -92,16 +223,16 @@ _$TableNavigatorCopyWith<_TableNavigator> get copyWith => __$TableNavigatorCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TableNavigator&&(identical(other.navigateToTable, navigateToTable) || other.navigateToTable == navigateToTable));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TableNavigator&&(identical(other.goBack, goBack) || other.goBack == goBack)&&(identical(other.navigateToTable, navigateToTable) || other.navigateToTable == navigateToTable));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,navigateToTable);
+int get hashCode => Object.hash(runtimeType,goBack,navigateToTable);
 
 @override
 String toString() {
-  return 'TableNavigator(navigateToTable: $navigateToTable)';
+  return 'TableNavigator(goBack: $goBack, navigateToTable: $navigateToTable)';
 }
 
 
@@ -112,7 +243,7 @@ abstract mixin class _$TableNavigatorCopyWith<$Res> implements $TableNavigatorCo
   factory _$TableNavigatorCopyWith(_TableNavigator value, $Res Function(_TableNavigator) _then) = __$TableNavigatorCopyWithImpl;
 @override @useResult
 $Res call({
- VoidCallback navigateToTable
+ VoidCallback goBack, VoidCallback navigateToTable
 });
 
 
@@ -129,9 +260,10 @@ class __$TableNavigatorCopyWithImpl<$Res>
 
 /// Create a copy of TableNavigator
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? navigateToTable = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? goBack = null,Object? navigateToTable = null,}) {
   return _then(_TableNavigator(
-navigateToTable: null == navigateToTable ? _self.navigateToTable : navigateToTable // ignore: cast_nullable_to_non_nullable
+goBack: null == goBack ? _self.goBack : goBack // ignore: cast_nullable_to_non_nullable
+as VoidCallback,navigateToTable: null == navigateToTable ? _self.navigateToTable : navigateToTable // ignore: cast_nullable_to_non_nullable
 as VoidCallback,
   ));
 }
